@@ -22,9 +22,7 @@ var P = {
 var font="'Outfit',sans-serif";
 var fontSerif="'Outfit',sans-serif";
  
-async function loadAll(){try{var r=localStorage.getItem(SK);return r?JSON.parse(r):null;}catch(e){return null;}}
-async function saveAll(d){try{localStorage.setItem(SK,JSON.stringify(d));}catch(e){console.error(e);}}
-async function saveAll(d){try{localStorage.setItem(SK,JSON.stringify(d));}catch(e){console.error(e);}}
+
  
 var blankState=function(){return{balance:null,months:{},goals:[],lent:[],badges:[],streakDays:0,lastLogDate:""};};
 var blankMonth=function(){return{salary:0,lessons:[],expenses:[]};};
