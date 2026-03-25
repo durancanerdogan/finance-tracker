@@ -22,8 +22,8 @@ var font="'Outfit',sans-serif";
 var fontSerif="'Outfit',sans-serif";
  
 var SK="teacher-fin-v9";
-async function loadAll(){try{var r=await window.storage.get(SK);return r?JSON.parse(r.value):null;}catch(e){return null;}}
-async function saveAll(d){try{await window.storage.set(SK,JSON.stringify(d));}catch(e){console.error(e);}}
+async function loadAll(){try{var r=localStorage.getItem(SK);return r?JSON.parse(r):null;}catch(e){return null;}}
+async function saveAll(d){try{localStorage.setItem(SK,JSON.stringify(d));}catch(e){console.error(e);}}
  
 var blankState=function(){return{balance:null,months:{},goals:[],lent:[],badges:[],streakDays:0,lastLogDate:""};};
 var blankMonth=function(){return{salary:0,lessons:[],expenses:[]};};
